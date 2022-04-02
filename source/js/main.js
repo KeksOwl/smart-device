@@ -1,6 +1,20 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 
+import {headerPositionInit} from './modules/header/fixed-header';
+
+import {showButtonInit} from './modules/about/show-more';
+
+import {accordionInit} from './modules/footer/accordion';
+
+import {smoothScrollInit} from './modules/banner/banner-scroll';
+
+import {formValidationInit} from './modules/feedback/form-validation';
+import {initLocalStorage} from './modules/feedback/form-storage';
+import {popupInit} from './modules/popup/popup';
+import {modalValidationInit} from './modules/popup/popup-validation';
+import {initModalLocalStorage} from './modules/popup/popup-storage';
+
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -9,6 +23,8 @@ window.addEventListener('DOMContentLoaded', () => {
   // ---------------------------------
 
   iosVhFix();
+  headerPositionInit();
+  smoothScrollInit();
 
   // Modules
   // ---------------------------------
@@ -17,6 +33,13 @@ window.addEventListener('DOMContentLoaded', () => {
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
     initModals();
+    showButtonInit();
+    accordionInit();
+    formValidationInit();
+    initLocalStorage();
+    popupInit();
+    modalValidationInit();
+    initModalLocalStorage();
   });
 });
 

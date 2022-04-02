@@ -1,0 +1,163 @@
+.location {
+  display: flex;
+  flex-flow: column wrap;
+
+  text-align: left;
+
+  min-width: 345px;
+
+  box-sizing: border-box;
+  padding-top: 8px;
+
+  @media (max-width: $vp-1409) and (min-width: $vp-desktop-only) {
+    min-width: unset;
+    margin-top: 30px;
+  }
+
+  @media (max-width: $vp-tablet) {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+
+    margin: 0;
+    padding: 0;
+    padding-left: 25px;
+  }
+
+  @media (max-width: $vp-mobile) {
+    min-width: unset;
+    padding: 0;
+    margin-top: 15px;
+
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: "";
+
+      width: 100vw;
+      height: 1px;
+
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+
+      background-color: $color-additional-alice-blue-opacity;
+    }
+  }
+}
+
+.location h2 {
+  margin: 0;
+  padding: 0;
+
+  color: $color-default-white;
+
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+
+  margin-bottom: 23px;
+
+  @media (max-width: $vp-mobile) {
+    margin-bottom: 16px;
+  }
+}
+
+.location__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  display: flex;
+  flex-flow: column wrap;
+  gap: 5px;
+
+  @media (max-width: $vp-mobile) {
+    &[data-location-list="is-hidden"] {
+      display: none;
+    }
+  }
+}
+
+.location__item {
+  &:first-child {
+    @media (max-width: $vp-mobile) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &:last-child {
+    @media (max-width: $vp-mobile) {
+      margin-bottom: 16px;
+    }
+  }
+
+  &:first-child a {
+    line-height: 135%;
+  }
+}
+
+.location__item a {
+  color: $color-white-opacity;
+  font-size: 16px;
+  line-height: 25px;
+
+  &:hover,
+  &:active {
+    opacity: 0.7;
+  }
+
+  @media (max-width: $vp-mobile) {
+    font-size: 14px;
+  }
+}
+
+.location__wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+.location__wrapper button {
+  display: none;
+
+  @media (max-width: $vp-mobile) {
+    display: block;
+
+    border: none;
+    outline: none;
+    background: none;
+
+    width: 20px;
+
+    position: relative;
+
+    &::before,
+    &::after {
+      position: absolute;
+      content: "";
+
+      width: 15px;
+      height: 1px;
+
+      right: 1px;
+      top: 5px;
+
+      background-color: $color-silver;
+    }
+
+    &::after {
+      transform: rotate(90deg);
+      display: none;
+    }
+
+    &[data-location-button="is-plus"] {
+      &::after {
+        display: block;
+      }
+    }
+  }
+}

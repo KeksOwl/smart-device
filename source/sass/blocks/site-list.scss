@@ -1,0 +1,14 @@
+.site-list__item a {
+  color: $color-white-opacity;
+  font-size: 16px;
+  line-height: 135%;
+
+  &:hover,
+  &:active {
+    opacity: 0.7;
+  }
+
+  @media (max-width: $vp-mobile) {
+    font-size: 14px;
+  }
+}

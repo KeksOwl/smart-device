@@ -1,0 +1,163 @@
+.footer-nav {
+  display: flex;
+  flex-flow: column wrap;
+
+  text-align: left;
+
+  box-sizing: border-box;
+  padding-top: 8px;
+  padding-left: 75px;
+  margin: 0 auto;
+
+  @media (max-width: $vp-1446) and (min-width: $vp-1371) {
+    padding-left: 0;
+    margin: 0;
+  }
+
+  @media (max-width: $vp-1371) and (min-width: $vp-desktop-only) {
+    padding-left: 0;
+    margin: 0;
+    margin-top: 30px;
+  }
+
+  @media (max-width: $vp-tablet) {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+
+    margin: 0;
+    padding: 0;
+  }
+
+  @media (max-width: $vp-mobile) {
+    position: relative;
+
+    margin-top: 8px;
+    padding: 23px 0;
+    padding-bottom: 7px;
+
+    &::after {
+      position: absolute;
+      content: "";
+
+      width: 100vw;
+      height: 1px;
+
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+
+      background-color: $color-additional-alice-blue-opacity;
+    }
+  }
+}
+
+.footer-nav__wrapper {
+  display: flex;
+  flex-flow: row wrap;
+
+  gap: 42px;
+
+  @media (max-width: $vp-tablet) {
+    flex-flow: column wrap;
+    gap: 5px;
+  }
+
+  @media (max-width: $vp-mobile) {
+    &[data-footer-nav-wrapper="is-hidden"] {
+      display: none;
+    }
+  }
+}
+
+.footer-nav__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  display: flex;
+  flex-flow: column wrap;
+  gap: 9px;
+
+  max-width: 50%;
+
+  @media (max-width: $vp-tablet) {
+    max-width: 80%;
+  }
+
+  @media (max-width: $vp-mobile) {
+    &:last-child {
+      margin-bottom: 16px;
+    }
+  }
+}
+
+.footer-nav h2 {
+  margin: 0;
+  padding: 0;
+
+  color: $color-default-white;
+
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+
+  margin-bottom: 20px;
+
+  @media (max-width: $vp-tablet) {
+    margin-bottom: 22px;
+  }
+
+  @media (max-width: $vp-mobile) {
+    margin-bottom: 15px;
+  }
+}
+
+.footer-nav__inner {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+.footer-nav__inner button {
+  display: none;
+
+  @media (max-width: $vp-mobile) {
+    display: block;
+
+    border: none;
+    outline: none;
+    background: none;
+
+    width: 20px;
+
+    position: relative;
+
+    &::before,
+    &::after {
+      position: absolute;
+      content: "";
+
+      width: 15px;
+      height: 1px;
+
+      right: 1px;
+      top: 5px;
+
+      background-color: $color-silver;
+    }
+
+    &::after {
+      transform: rotate(90deg);
+      display: none;
+    }
+
+    &[data-footer-nav-button="is-plus"] {
+      &::after {
+        display: block;
+      }
+    }
+  }
+}

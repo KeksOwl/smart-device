@@ -1,0 +1,48 @@
+// Colors
+// ---------------------------------
+
+// Default
+
+$color-default-white: #ffffff;
+
+// Project palette
+// для нейминга цветов используем https://www.htmlcsscolor.com/hex/334482
+
+$color-alice-blue: #f2f5f6;
+$color-additional-alice-blue: #f8fdff;
+$color-black-pearl: #041827;
+$color-additional-black-pearl: #041427;
+$color-deep-sky-blue: #00b2ff;
+$color-whisper: #ebebeb;
+$color-white-opacity: #ffffffb3;
+$color-additional-alice-blue-opacity: #f8fdffb3;
+$color-silver: #c4c4c4;
+$color-additional-deep-sky-blue: #00b3ff;
+$color-cerulean: #026693;
+$color-additional-black-pearl-opacity: #04142726;
+$color-red-orange: #ee2222;
+$color-black-pearl-modal: #03101bb3;
+
+// Gradient
+$black-pearl-to-bottom: linear-gradient(180deg, #041827 84.9%, #04182700 100%);
+$black-pearl-additional-to-bottom: linear-gradient(180deg, #192024b3 71.72%, #19202400 100%);
+
+// Viewports
+// ---------------------------------
+
+$vp-mobile: 767px;
+$vp-tablet: 1023px;
+$vp-desktop-only: 1024px;
+$vp-1059: 1059px;
+$vp-1219: 1219px;
+$vp-1265: 1265px;
+$vp-1319: 1319px;
+$vp-1371: 1371px;
+$vp-1409: 1409px;
+$vp-1446: 1446px;
+$vp-1519: 1519px;
+
+// Retina
+// ---------------------------------
+
+$retina-dppx: 2dppx;

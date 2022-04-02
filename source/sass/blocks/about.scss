@@ -1,0 +1,145 @@
+.about {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: flex-start;
+
+  text-align: left;
+
+  box-sizing: border-box;
+  padding-left: calc(150px + 100px);
+
+  margin-bottom: 120px;
+
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+
+    width: 150px;
+    height: 320px;
+
+    left: 0;
+    top: 0;
+
+    background-image: url("../img/about/2022.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/about/2022@2x.png");
+    }
+
+    @media (max-width: $vp-1219) and (min-width: $vp-desktop-only) {
+      top: -10px;
+    }
+
+    @media (max-width: $vp-tablet) {
+      top: 5px;
+      left: -2px;
+    }
+
+    @media (max-width: $vp-mobile) {
+      display: none;
+    }
+  }
+
+  @media (max-width: $vp-1219) and (min-width: $vp-desktop-only) {
+    padding-left: 0;
+    padding-top: calc(320px + 20px);
+  }
+
+  @media (max-width: $vp-tablet) {
+    padding-left: calc(150px + 25px);
+    margin-bottom: 80px;
+  }
+
+  @media (max-width: $vp-mobile) {
+    padding: 0;
+  }
+}
+
+.about h2 {
+  margin: 0;
+  padding: 0;
+
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 140.6%;
+
+  color: $color-black-pearl;
+
+  @media (max-width: $vp-mobile) {
+    font-size: 28px;
+  }
+}
+
+.about p {
+  margin: 0;
+  padding: 0;
+
+  font-size: 16px;
+  line-height: 134.4%;
+
+  color: $color-black-pearl;
+
+  margin-top: 15px;
+  margin-bottom: 5px;
+
+  @media (max-width: $vp-mobile) {
+    font-size: 14px;
+
+    margin: 10px 0;
+  }
+}
+
+.about__button {
+  display: none;
+
+  margin: 0;
+
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: uppercase;
+
+  color: $color-deep-sky-blue;
+  background-color: transparent;
+
+  border: 1px solid $color-deep-sky-blue;
+  border-radius: 3px;
+
+  box-sizing: border-box;
+  padding: 12px;
+  margin-top: 36px;
+
+  width: 180px;
+  min-height: 45px;
+
+  cursor: pointer;
+
+  user-select: none;
+
+  &:hover,
+  &:active {
+    opacity: 0.7;
+  }
+
+  &[data-button="is-shown"] {
+    display: block;
+  }
+
+  @media (max-width: $vp-tablet) {
+    margin-top: 13px;
+  }
+
+  @media (max-width: $vp-mobile) {
+    width: 160px;
+    min-height: 35px;
+
+    margin-top: 3px;
+    padding: 8px;
+  }
+}
