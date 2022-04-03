@@ -638,7 +638,6 @@ img {
 
 .socials__list {
   margin: 0;
-  padding: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1067,7 +1066,6 @@ img {
 .about__button {
   display: none;
   margin: 0;
-  padding: 0;
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-weight: 700;
   font-size: 14px;
@@ -1200,7 +1198,6 @@ img {
 
 .service__link {
   margin: 0;
-  padding: 0;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   padding: 47px 145px 50px 40px;
@@ -1278,8 +1275,8 @@ img {
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
   z-index: -100;
-  background: -o-linear-gradient(310.8deg, #026693 33.5%, #00B3FF 33.6% 100%);
-  background: linear-gradient(139.2deg, #026693 33.5%, #00B3FF 33.6% 100%);
+  background: -o-linear-gradient(310.8deg, #026693 33.5%, #00b3ff 33.6% 100%);
+  background: linear-gradient(139.2deg, #026693 33.5%, #00b3ff 33.6% 100%);
 }
 
 .feedback::after {
@@ -1315,7 +1312,7 @@ img {
   color: #ffffff;
 }
 
-.feedback__form {
+.feedback form {
   margin: 0;
   padding: 0;
   margin-top: 35px;
@@ -1334,7 +1331,7 @@ img {
   row-gap: 30px;
 }
 
-.feedback__form fieldset {
+.feedback fieldset {
   margin: 0;
   padding: 0;
   border: none;
@@ -1344,7 +1341,7 @@ img {
   grid-row: 1 / 2;
 }
 
-.feedback__form ul {
+.feedback ul {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -1365,16 +1362,16 @@ img {
   row-gap: 20px;
 }
 
-.feedback__form li {
+.feedback li {
   text-align: left;
 }
 
-.feedback__form li:last-child {
+.feedback li:last-child {
   grid-column: 1 / -1;
 }
 
-.feedback__form input,
-.feedback__form textarea {
+.feedback input,
+.feedback textarea {
   width: 100%;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -1387,42 +1384,42 @@ img {
   background-color: #04142726;
 }
 
-.feedback__form input::-webkit-input-placeholder,
-.feedback__form textarea::-webkit-input-placeholder {
+.feedback input::-webkit-input-placeholder,
+.feedback textarea::-webkit-input-placeholder {
   color: #ffffff;
 }
 
-.feedback__form input::-moz-placeholder,
-.feedback__form textarea::-moz-placeholder {
+.feedback input::-moz-placeholder,
+.feedback textarea::-moz-placeholder {
   color: #ffffff;
 }
 
-.feedback__form input:-ms-input-placeholder,
-.feedback__form textarea:-ms-input-placeholder {
+.feedback input:-ms-input-placeholder,
+.feedback textarea:-ms-input-placeholder {
   color: #ffffff;
 }
 
-.feedback__form input::-ms-input-placeholder,
-.feedback__form textarea::-ms-input-placeholder {
+.feedback input::-ms-input-placeholder,
+.feedback textarea::-ms-input-placeholder {
   color: #ffffff;
 }
 
-.feedback__form input::placeholder,
-.feedback__form textarea::placeholder {
+.feedback input::placeholder,
+.feedback textarea::placeholder {
   color: #ffffff;
 }
 
-.feedback__form input {
+.feedback input {
   height: 50px;
 }
 
-.feedback__form textarea {
+.feedback textarea {
   resize: none;
   padding: 25px 15px;
   height: 155px;
 }
 
-.feedback__form-wrapper {
+.feedback__wrapper {
   grid-column: -1 / -2;
   grid-row: -1 / -2;
   text-align: left;
@@ -1432,14 +1429,14 @@ img {
   padding-top: 12px;
 }
 
-.feedback__form-wrapper input {
+.feedback__wrapper input {
   position: absolute;
   opacity: 0;
   z-index: -1;
   height: 0;
 }
 
-.feedback__form-wrapper input + label::before {
+.feedback__wrapper input + label::before {
   position: absolute;
   content: "";
   width: 13px;
@@ -1450,7 +1447,7 @@ img {
   border-radius: 2px;
 }
 
-.feedback__form-wrapper input:checked + label::after {
+.feedback__wrapper input:checked + label::after {
   position: absolute;
   content: "";
   width: 10px;
@@ -1461,21 +1458,21 @@ img {
   background-repeat: no-repeat;
 }
 
-.feedback__form-wrapper input:focus + label::before {
+.feedback__wrapper input:focus + label::before {
   outline: 1px solid #ffffff;
 }
 
-.feedback__form-wrapper input:invalid + label {
+.feedback__wrapper input:invalid + label {
   text-decoration: underline;
   color: #ee2222;
 }
 
-.feedback__form-wrapper input:invalid + label::before {
+.feedback__wrapper input:invalid + label::before {
   outline: 1px solid #ee2222;
   border: 1px solid #ee2222;
 }
 
-.feedback__form label {
+.feedback label {
   font-size: 14px;
   line-height: 16px;
   color: #ffffff;
@@ -1487,12 +1484,12 @@ img {
   user-select: none;
 }
 
-.feedback__form label:hover,
-.feedback__form label:active {
+.feedback label:hover,
+.feedback label:active {
   opacity: 0.7;
 }
 
-.feedback__form button {
+.feedback button {
   border: none;
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-weight: 700;
@@ -1522,8 +1519,8 @@ img {
   user-select: none;
 }
 
-.feedback__form button:hover,
-.feedback__form button:active {
+.feedback button:hover,
+.feedback button:active {
   opacity: 0.7;
 }
 
@@ -1626,7 +1623,7 @@ img {
   transform: rotate(-45deg);
 }
 
-.modal__form {
+.modal form {
   margin: 0;
   padding: 0;
   margin-top: 37px;
@@ -1639,13 +1636,13 @@ img {
   flex-flow: column wrap;
 }
 
-.modal__form fieldset {
+.modal fieldset {
   margin: 0;
   padding: 0;
   border: none;
 }
 
-.modal__form ul {
+.modal ul {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -1658,16 +1655,16 @@ img {
   flex-flow: column wrap;
 }
 
-.modal__form li {
+.modal li {
   margin-top: 20px;
 }
 
-.modal__form li:first-child {
+.modal li:first-child {
   margin-top: 0;
 }
 
-.modal__form input,
-.modal__form textarea {
+.modal input,
+.modal textarea {
   width: 100%;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -1680,42 +1677,42 @@ img {
   background-color: #04142726;
 }
 
-.modal__form input::-webkit-input-placeholder,
-.modal__form textarea::-webkit-input-placeholder {
+.modal input::-webkit-input-placeholder,
+.modal textarea::-webkit-input-placeholder {
   color: #ffffff;
 }
 
-.modal__form input::-moz-placeholder,
-.modal__form textarea::-moz-placeholder {
+.modal input::-moz-placeholder,
+.modal textarea::-moz-placeholder {
   color: #ffffff;
 }
 
-.modal__form input:-ms-input-placeholder,
-.modal__form textarea:-ms-input-placeholder {
+.modal input:-ms-input-placeholder,
+.modal textarea:-ms-input-placeholder {
   color: #ffffff;
 }
 
-.modal__form input::-ms-input-placeholder,
-.modal__form textarea::-ms-input-placeholder {
+.modal input::-ms-input-placeholder,
+.modal textarea::-ms-input-placeholder {
   color: #ffffff;
 }
 
-.modal__form input::placeholder,
-.modal__form textarea::placeholder {
+.modal input::placeholder,
+.modal textarea::placeholder {
   color: #ffffff;
 }
 
-.modal__form input {
+.modal input {
   height: 50px;
 }
 
-.modal__form textarea {
+.modal textarea {
   resize: none;
   padding: 25px 15px;
   height: 155px;
 }
 
-.modal__form-wrapper {
+.modal__inner {
   -webkit-box-ordinal-group: 3;
   -ms-flex-order: 2;
   order: 2;
@@ -1725,14 +1722,14 @@ img {
   padding-left: 10px;
 }
 
-.modal__form-wrapper input {
+.modal__inner input {
   position: absolute;
   opacity: 0;
   z-index: -1;
   height: 0;
 }
 
-.modal__form-wrapper input + label::before {
+.modal__inner input + label::before {
   position: absolute;
   content: "";
   width: 13px;
@@ -1743,7 +1740,7 @@ img {
   border-radius: 2px;
 }
 
-.modal__form-wrapper input:checked + label::after {
+.modal__inner input:checked + label::after {
   position: absolute;
   content: "";
   width: 10px;
@@ -1754,21 +1751,21 @@ img {
   background-repeat: no-repeat;
 }
 
-.modal__form-wrapper input:focus + label::before {
+.modal__inner input:focus + label::before {
   outline: 1px solid #ffffff;
 }
 
-.modal__form-wrapper input:invalid + label {
+.modal__inner input:invalid + label {
   text-decoration: underline;
   color: #ee2222;
 }
 
-.modal__form-wrapper input:invalid + label::before {
+.modal__inner input:invalid + label::before {
   outline: 1px solid #ee2222;
   border: 1px solid #ee2222;
 }
 
-.modal__form label {
+.modal label {
   font-size: 14px;
   line-height: 16px;
   color: #ffffff;
@@ -1780,12 +1777,12 @@ img {
   user-select: none;
 }
 
-.modal__form label:hover,
-.modal__form label:active {
+.modal label:hover,
+.modal label:active {
   opacity: 0.7;
 }
 
-.modal__form button {
+.modal button[type="submit"] {
   border: none;
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-weight: 700;
@@ -1815,8 +1812,8 @@ img {
   user-select: none;
 }
 
-.modal__form button:hover,
-.modal__form button:active {
+.modal button[type="submit"]:hover,
+.modal button[type="submit"]:active {
   opacity: 0.7;
 }
 
@@ -2081,7 +2078,7 @@ img {
   }
 
   .feedback::before {
-    background: #00B3FF;
+    background: #00b3ff;
   }
 
   .feedback::after {
@@ -2101,26 +2098,26 @@ img {
     align-self: flex-start;
   }
 
-  .feedback__form {
+  .feedback form {
     margin-left: 0;
     margin-top: 23px;
     width: 100%;
   }
 
-  .feedback__form ul {
+  .feedback ul {
     padding: 0;
   }
 
-  .feedback__form textarea {
+  .feedback textarea {
     padding: 30px 15px;
   }
 
-  .feedback__form-wrapper {
+  .feedback__wrapper {
     padding-left: 10px;
     padding-top: 8px;
   }
 
-  .feedback__form button {
+  .feedback button {
     margin-right: 40px;
     margin-top: 1px;
     padding-top: 16px;
@@ -2395,7 +2392,7 @@ img {
     -webkit-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
     transform: translateX(-50%);
-    color: white;
+    color: #ffffff;
   }
 
   .features {
@@ -2547,7 +2544,7 @@ img {
   }
 
   .feedback::before {
-    background: #00B3FF;
+    background: #00b3ff;
   }
 
   .feedback::after {
@@ -2565,7 +2562,7 @@ img {
     margin-top: 8px;
   }
 
-  .feedback__form {
+  .feedback form {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
     -ms-grid-rows: -webkit-max-content;
@@ -2577,12 +2574,12 @@ img {
     width: 100%;
   }
 
-  .feedback__form fieldset {
+  .feedback fieldset {
     grid-column: auto;
     grid-row: auto;
   }
 
-  .feedback__form ul {
+  .feedback ul {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
     -ms-grid-rows: -webkit-max-content;
@@ -2591,12 +2588,12 @@ img {
     grid-template-rows: max-content;
   }
 
-  .feedback__form textarea {
+  .feedback textarea {
     height: 180px;
     padding: 25px 15px;
   }
 
-  .feedback__form-wrapper {
+  .feedback__wrapper {
     grid-column: auto;
     grid-row: auto;
     -webkit-box-ordinal-group: 4;
@@ -2606,7 +2603,7 @@ img {
     padding-left: 30px;
   }
 
-  .feedback__form button {
+  .feedback button {
     grid-column: auto;
     grid-row: auto;
     -webkit-box-ordinal-group: 3;
@@ -2624,7 +2621,7 @@ img {
 }
 
 @media (max-width: 767px) and (max-width: 767px) {
-  .feedback__form li:last-child {
+  .feedback li:last-child {
     grid-column: auto;
     grid-row: auto;
   }

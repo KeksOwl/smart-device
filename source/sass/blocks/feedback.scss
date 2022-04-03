@@ -132,7 +132,7 @@
   }
 }
 
-.feedback__form {
+.feedback form {
   margin: 0;
   padding: 0;
 
@@ -161,7 +161,7 @@
   }
 }
 
-.feedback__form fieldset {
+.feedback fieldset {
   margin: 0;
   padding: 0;
   border: none;
@@ -175,7 +175,7 @@
   }
 }
 
-.feedback__form ul {
+.feedback ul {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -199,7 +199,7 @@
   }
 }
 
-.feedback__form li {
+.feedback li {
   text-align: left;
 
   &:last-child {
@@ -214,8 +214,8 @@
   }
 }
 
-.feedback__form input,
-.feedback__form textarea {
+.feedback input,
+.feedback textarea {
   width: 100%;
   box-sizing: border-box;
   padding: 15px;
@@ -233,11 +233,11 @@
   }
 }
 
-.feedback__form input {
+.feedback input {
   height: 50px;
 }
 
-.feedback__form textarea {
+.feedback textarea {
   resize: none;
   padding: 25px 15px;
   height: 155px;
@@ -252,7 +252,7 @@
   }
 }
 
-.feedback__form-wrapper {
+.feedback__wrapper {
   grid-column: -1 / -2;
   grid-row: -1 / -2;
 
@@ -278,7 +278,7 @@
   }
 }
 
-.feedback__form-wrapper input {
+.feedback__wrapper input {
   position: absolute;
   opacity: 0;
   z-index: -1;
@@ -327,7 +327,7 @@
   }
 }
 
-.feedback__form label {
+.feedback label {
   font-size: 14px;
   line-height: 16px;
   color: $color-default-white;
@@ -344,7 +344,7 @@
   }
 }
 
-.feedback__form button {
+.feedback button {
   border: none;
 
   font-family: "Roboto Condensed", "Arial", sans-serif;
