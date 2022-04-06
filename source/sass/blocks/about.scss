@@ -30,10 +30,6 @@
       background-image: url("../img/about/2022@2x.png");
     }
 
-    @media (max-width: $vp-1219) and (min-width: $vp-desktop-only) {
-      top: -10px;
-    }
-
     @media (max-width: $vp-tablet) {
       top: 5px;
       left: -2px;
@@ -42,11 +38,6 @@
     @media (max-width: $vp-mobile) {
       display: none;
     }
-  }
-
-  @media (max-width: $vp-1219) and (min-width: $vp-desktop-only) {
-    padding-left: 0;
-    padding-top: calc(320px + 20px);
   }
 
   @media (max-width: $vp-tablet) {

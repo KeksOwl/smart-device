@@ -22,11 +22,6 @@
   column-gap: 33px;
   row-gap: 30px;
 
-  @media (max-width: $vp-1319) and (min-width: $vp-desktop-only) {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-  }
-
   @media (max-width: $vp-tablet) {
     column-gap: 30px;
   }

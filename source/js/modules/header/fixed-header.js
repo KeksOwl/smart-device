@@ -8,8 +8,16 @@ const headerPositionInit = () => {
   window.onscroll = () => {
     if (window.matchMedia('(min-width: 1024px)').matches) { // Проверяем, чтобы ширина была равна десктопной
       checkHeaderPosition();
+    } else {
+      setHeaderStatic();
     }
   };
+};
+
+// Функция для возврата шапки в поток
+const setHeaderStatic = () => {
+  pageHeader.dataset.header = 'is-static'; // Возвращаем шапку в поток
+  pageMain.style.margin = '0'; // Удаляем отступ для Main
 };
 
 // При скролле меняет position шапки на фиксированную
@@ -20,8 +28,7 @@ const checkHeaderPosition = () => {
     pageHeader.dataset.header = 'is-fixed'; // Фиксируем шапку
     pageMain.style.margin = `${headerHeight}px 0 0 0`; // Делаем отступ для Main на высоту шапки (чтобы не скакала страница)
   } else {
-    pageHeader.dataset.header = 'is-static'; // Возвращаем шапку в поток
-    pageMain.style.margin = '0'; // Удаляем отступ
+    setHeaderStatic();
   }
 };
 

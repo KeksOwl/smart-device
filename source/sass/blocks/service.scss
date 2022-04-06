@@ -77,8 +77,12 @@
   list-style: none;
 
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row nowrap;
   gap: 85px;
+
+  @media (max-width: $vp-1919) and (min-width: $vp-desktop-only) {
+    gap: 6.95%;
+  }
 
   @media (max-width: $vp-tablet) {
     flex-direction: column;
@@ -87,8 +91,10 @@
 }
 
 .service__item {
-  width: 350px;
-  min-height: 650px;
+  flex-basis: 350px;
+  flex-shrink: 1;
+  max-width: 350px;
+  padding-bottom: 40.4%;
 
   text-align: left;
 
@@ -99,12 +105,12 @@
     opacity: 0.7;
   }
 
-  @media (max-width: $vp-1059) and (min-width: $vp-desktop-only) {
-    width: 100%;
-    min-height: 635px;
-  }
-
   @media (max-width: $vp-tablet) {
+    flex-basis: unset;
+    flex-shrink: unset;
+    max-width: unset;
+    padding-bottom: unset;
+
     width: 100%;
     min-height: 250px;
   }
@@ -159,42 +165,42 @@
 
   &--production {
     &::before {
-      background-position: -185px -105px;
+      background-position: 16% 71%;
 
       @media (max-width: $vp-tablet) {
-        background-position: -235px -540px;
+        background-position: 30% 97%;
       }
 
       @media (max-width: $vp-mobile) {
-        background-position: -375px -295px;
+        background-position: 31% 52%;
       }
     }
   }
 
   &--mounting {
     &::before {
-      background-position: -520px -115px;
+      background-position: 47% 73%;
 
       @media (max-width: $vp-tablet) {
-        background-position: -615px -310px;
+        background-position: 77% 55%;
       }
 
       @media (max-width: $vp-mobile) {
-        background-position: -365px -535px;
+        background-position: 30% 95%;
       }
     }
   }
 
   &--accessories {
     &::before {
-      background-position: -875px -100px;
+      background-position: 78% 66%;
 
       @media (max-width: $vp-tablet) {
-        background-position: -140px -355px;
+        background-position: 18% 63%;
       }
 
       @media (max-width: $vp-mobile) {
-        background-position: -880px -390px;
+        background-position: 72% 70%;
       }
     }
   }
@@ -213,6 +219,14 @@
   color: $color-default-white;
 
   user-select: none;
+
+  @media (max-width: $vp-1919) and (min-width: $vp-1520) {
+    padding: 2.4vw 8vw 2vw 2.1vw;
+  }
+
+  @media (max-width: $vp-1519) and (min-width: $vp-desktop-only) {
+    padding: 1.5vw 4vw 1.5vw 2vw;
+  }
 
   @media (max-width: $vp-tablet) {
     padding: 37px;
@@ -273,6 +287,14 @@
   font-weight: 400;
   font-size: 20px;
   line-height: 30px;
+
+  @media (max-width: $vp-1919) and (min-width: $vp-1520) {
+    font-size: 1.08vw;
+  }
+
+  @media (max-width: $vp-1519) and (min-width: $vp-desktop-only) {
+    font-size: 1.54vw;
+  }
 
   @media (max-width: $vp-mobile) {
     font-size: 18px;

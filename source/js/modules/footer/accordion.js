@@ -8,34 +8,38 @@ const footerNavWrapper = footerNavBlock.querySelector('[data-footer-nav-wrapper]
 const locationList = locationBlock.querySelector('[data-location-list]'); // location list
 
 // Событие нажатия кнопки в навигации разделов
-const onNavButtonClick = () => {
-  locationList.dataset.locationList = 'is-hidden';
-  locationButton.dataset.locationButton = 'is-plus';
+const onNavButtonClick = (evt) => {
+  if (!evt.target.matches('a')) {
+    locationList.dataset.locationList = 'is-hidden';
+    locationButton.dataset.locationButton = 'is-plus';
 
-  const footerNavStatus = footerNavWrapper.getAttribute('data-footer-nav-wrapper');
+    const footerNavStatus = footerNavWrapper.getAttribute('data-footer-nav-wrapper');
 
-  if (footerNavStatus === 'is-hidden') {
-    footerNavWrapper.dataset.footerNavWrapper = 'is-shown';
-    footerNavButton.dataset.footerNavButton = 'is-minus';
-  } else {
-    footerNavWrapper.dataset.footerNavWrapper = 'is-hidden';
-    footerNavButton.dataset.footerNavButton = 'is-plus';
+    if (footerNavStatus === 'is-hidden') {
+      footerNavWrapper.dataset.footerNavWrapper = 'is-shown';
+      footerNavButton.dataset.footerNavButton = 'is-minus';
+    } else {
+      footerNavWrapper.dataset.footerNavWrapper = 'is-hidden';
+      footerNavButton.dataset.footerNavButton = 'is-plus';
+    }
   }
 };
 
 // Событие нажатия кнопки в адресе/локации
-const onLocationButtonClick = () => {
-  footerNavWrapper.dataset.footerNavWrapper = 'is-hidden';
-  footerNavButton.dataset.footerNavButton = 'is-plus';
+const onLocationButtonClick = (evt) => {
+  if (!evt.target.matches('a')) {
+    footerNavWrapper.dataset.footerNavWrapper = 'is-hidden';
+    footerNavButton.dataset.footerNavButton = 'is-plus';
 
-  const locationListStatus = locationList.getAttribute('data-location-list');
+    const locationListStatus = locationList.getAttribute('data-location-list');
 
-  if (locationListStatus === 'is-hidden') {
-    locationList.dataset.locationList = 'is-shown';
-    locationButton.dataset.locationButton = 'is-minus';
-  } else {
-    locationList.dataset.locationList = 'is-hidden';
-    locationButton.dataset.locationButton = 'is-plus';
+    if (locationListStatus === 'is-hidden') {
+      locationList.dataset.locationList = 'is-shown';
+      locationButton.dataset.locationButton = 'is-minus';
+    } else {
+      locationList.dataset.locationList = 'is-hidden';
+      locationButton.dataset.locationButton = 'is-plus';
+    }
   }
 };
 
@@ -48,8 +52,8 @@ const accordionInit = () => {
   locationList.dataset.locationList = 'is-hidden';
   locationButton.dataset.locationButton = 'is-plus';
 
-  footerNavButton.addEventListener('click', onNavButtonClick);
-  locationButton.addEventListener('click', onLocationButtonClick);
+  footerNavBlock.addEventListener('click', onNavButtonClick);
+  locationBlock.addEventListener('click', onLocationButtonClick);
 };
 
 export {accordionInit};
