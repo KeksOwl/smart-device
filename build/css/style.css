@@ -469,6 +469,7 @@ img {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  justify-self: center;
   width: 100%;
   max-width: 1340px;
   min-height: 120px;
@@ -519,15 +520,23 @@ img {
   border: 1px solid #f2f5f6;
   border-radius: 3px;
   width: 160px;
-  height: 40px;
+  min-height: 40px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   padding: 10px 15px;
   margin-top: 5px;
+  margin-bottom: 15px;
 }
 
 .page-header__logo img:last-child {
   display: none;
+}
+
+.page-main {
+  max-width: 1220px;
+  width: 100%;
+  -ms-grid-column-align: center;
+  justify-self: center;
 }
 
 .page-footer {
@@ -545,6 +554,9 @@ img {
   box-sizing: border-box;
   padding: 50px 0;
   min-height: 280px;
+  max-width: 1220px;
+  width: 100%;
+  justify-self: center;
   position: relative;
 }
 
@@ -570,6 +582,7 @@ img {
   -webkit-box-direction: normal;
   -ms-flex-flow: column wrap;
   flex-flow: column wrap;
+  max-width: 30%;
 }
 
 .page-footer__logo {
@@ -1116,7 +1129,7 @@ img {
 .service {
   position: relative;
   padding-top: 65px;
-  padding-bottom: 141px;
+  padding-bottom: calc(141px - 85px);
 }
 
 .service::before {
@@ -1158,20 +1171,25 @@ img {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  -ms-flex-flow: row nowrap;
-  flex-flow: row nowrap;
-  gap: 85px;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
 }
 
 .service__item {
-  -ms-flex-preferred-size: 350px;
-  flex-basis: 350px;
+  -ms-flex-preferred-size: 28.62%;
+  flex-basis: 28.62%;
   -ms-flex-negative: 1;
   flex-shrink: 1;
   max-width: 350px;
   padding-bottom: 40.4%;
   text-align: left;
   position: relative;
+  margin-right: 85px;
+  margin-bottom: 85px;
+}
+
+.service__item:nth-child(3n+3) {
+  margin-right: 0;
 }
 
 .service__item:hover,
@@ -1887,6 +1905,7 @@ img {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
+    max-width: unset;
   }
 
   .contacts {
@@ -1899,7 +1918,9 @@ img {
     flex-flow: row wrap;
     width: unset;
     max-width: 60%;
-    gap: 40px;
+    -webkit-column-gap: unset;
+    -moz-column-gap: unset;
+    column-gap: unset;
     margin-top: 10px;
     padding-right: 10px;
     padding-left: 0;
@@ -1912,6 +1933,15 @@ img {
     width: 20px;
     height: 20px;
     margin: 0;
+    margin-right: 40px;
+  }
+
+  .contacts__link:nth-child(2n+2) {
+    margin-right: 40px;
+  }
+
+  .contacts__link:last-child {
+    margin-right: 0;
   }
 
   .contacts__link::before {
@@ -2052,14 +2082,6 @@ img {
     margin-bottom: 38px;
   }
 
-  .service__list {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    gap: 30px;
-  }
-
   .service__item {
     -ms-flex-preferred-size: unset;
     flex-basis: unset;
@@ -2069,6 +2091,12 @@ img {
     padding-bottom: unset;
     width: 100%;
     min-height: 250px;
+    margin: 0;
+    margin-bottom: 30px;
+  }
+
+  .service__item:last-child {
+    margin-bottom: 0;
   }
 
   .service__item::before {
@@ -2220,6 +2248,20 @@ img {
 
   .contacts {
     margin-top: 5px;
+  }
+
+  .contacts__link {
+    margin: 0;
+    margin-left: 40px;
+  }
+
+  .contacts__link:nth-child(2n+2) {
+    margin-right: 0;
+    margin-left: 40px;
+  }
+
+  .contacts__link:last-child {
+    margin-left: 40px;
   }
 
   .socials {
@@ -2657,42 +2699,12 @@ img {
 
 @media (max-width: 1919px) and (min-width: 1024px) {
   .page__body {
-    padding: 0 17vw;
+    padding: 0 4vw;
   }
 
-  .service__list {
-    gap: 6.95%;
-  }
-}
-
-@media (max-width: 1519px) and (min-width: 1024px) {
-  .contacts {
-    -ms-grid-columns: 1fr;
-    grid-template-columns: 1fr;
-    -ms-grid-rows: 1fr;
-    grid-template-rows: 1fr;
-    margin: 0;
-    width: 210px;
-  }
-
-  .banner {
-    padding: 0;
-  }
-
-  .banner h2 {
-    font-size: 3.5vw;
-  }
-
-  .banner__link {
-    width: unset;
-  }
-
-  .service__link {
-    padding: 1.5vw 4vw 1.5vw 2vw;
-  }
-
-  .service__link h3 {
-    font-size: 1.54vw;
+  .service__item {
+    margin-right: 6.95%;
+    margin-bottom: 6.95%;
   }
 }
 
@@ -2725,6 +2737,24 @@ img {
 @media (max-width: 1409px) and (min-width: 1024px) {
   .location {
     min-width: unset;
+  }
+}
+
+@media (max-width: 1519px) and (min-width: 1024px) {
+  .banner {
+    padding: 8vw;
+  }
+
+  .banner__link {
+    width: unset;
+  }
+
+  .service__link {
+    padding: 1.5vw 4vw 1.5vw 2vw;
+  }
+
+  .service__link h3 {
+    font-size: 1.54vw;
   }
 }
 

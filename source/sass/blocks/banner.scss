@@ -13,7 +13,7 @@
   padding: 184px 125px;
 
   @media (max-width: $vp-1519) and (min-width: $vp-desktop-only) {
-    padding: 0;
+    padding: 8vw;
   }
 
   @media (max-width: $vp-tablet) {
@@ -82,10 +82,6 @@
   text-transform: uppercase;
 
   color: $color-alice-blue;
-
-  @media (max-width: $vp-1519) and (min-width: $vp-desktop-only) {
-    font-size: 3.5vw;
-  }
 
   @media (max-width: $vp-tablet) {
     font-size: 64px;

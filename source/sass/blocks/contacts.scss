@@ -14,21 +14,13 @@
   box-sizing: border-box;
   padding-left: 35px;
 
-  @media (max-width: $vp-1519) and (min-width: $vp-desktop-only) {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-
-    margin: 0;
-    width: 210px;
-  }
-
   @media (max-width: $vp-tablet) {
     display: flex;
     flex-flow: row wrap;
 
     width: unset;
     max-width: 60%;
-    gap: 40px;
+    column-gap: unset;
 
     margin-top: 10px;
     padding-right: 10px;
@@ -67,6 +59,29 @@
     height: 20px;
 
     margin: 0;
+    margin-right: 40px;
+
+    &:nth-child(2n+2) {
+      margin-right: 40px;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  @media (max-width: $vp-mobile) {
+    margin: 0;
+    margin-left: 40px;
+
+    &:nth-child(2n+2) {
+      margin-right: 0;
+      margin-left: 40px;
+    }
+
+    &:last-child {
+      margin-left: 40px;
+    }
   }
 
   &::before {

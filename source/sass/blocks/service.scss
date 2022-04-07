@@ -2,7 +2,7 @@
   position: relative;
 
   padding-top: 65px;
-  padding-bottom: 141px;
+  padding-bottom: calc(141px - 85px);
 
   @media (max-width: $vp-tablet) {
     padding-top: 56px;
@@ -77,21 +77,11 @@
   list-style: none;
 
   display: flex;
-  flex-flow: row nowrap;
-  gap: 85px;
-
-  @media (max-width: $vp-1919) and (min-width: $vp-desktop-only) {
-    gap: 6.95%;
-  }
-
-  @media (max-width: $vp-tablet) {
-    flex-direction: column;
-    gap: 30px;
-  }
+  flex-flow: row wrap;
 }
 
 .service__item {
-  flex-basis: 350px;
+  flex-basis: 28.62%;
   flex-shrink: 1;
   max-width: 350px;
   padding-bottom: 40.4%;
@@ -99,6 +89,18 @@
   text-align: left;
 
   position: relative;
+
+  margin-right: 85px;
+  margin-bottom: 85px;
+
+  @media (max-width: $vp-1919) and (min-width: $vp-desktop-only) {
+    margin-right: 6.95%;
+    margin-bottom: 6.95%;
+  }
+
+  &:nth-child(3n+3) {
+    margin-right: 0;
+  }
 
   &:hover,
   &:active {
@@ -113,6 +115,13 @@
 
     width: 100%;
     min-height: 250px;
+
+    margin: 0;
+    margin-bottom: 30px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
   &::before {
